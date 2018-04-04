@@ -1,4 +1,7 @@
-<a href="#/customer">Go Back</a>
+<div class="panel">
+  <a class="btn btn-primary" href="#/customer">Go Back</a>
+</div>
+
 <div class="panel panel-default" ng-init="getProfile()">
   <div class="panel-heading">
     <h3 class="panel-title">{{customer.salutation + " " + customer.firstName + " " + customer.lastName}}</h3>
@@ -21,5 +24,5 @@
 </div>
 
 <div class="pull-right">
-  <a href="#/customer/edit/{{customer._id}}">Edit</a> |  <a href="#" ng-click="removeProfile(customer._id)">Delete</a>
+  <a class="btn btn-primary" href="#/customer/edit/{{customer._id}}">Edit</a> |  <a class="btn btn-primary" href="#" ng-click="removeProfile(customer._id)">Delete</a>
 </div>
