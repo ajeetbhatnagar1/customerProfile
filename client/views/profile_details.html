@@ -1,0 +1,25 @@
+<a href="#/customer">Go Back</a>
+<div class="panel panel-default" ng-init="getProfile()">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{customer.salutation + " " + customer.firstName + " " + customer.lastName}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{customer.image_url}}">
+      </div>
+      <div class="col-md-8">
+        <ul class="list-group">
+          <li class="list-group-item">NRIC/FIN : {{customer.nricfin}}</li>
+          <li class="list-group-item">Contact Number: {{customer.contactNumber}}</li>
+          <li class="list-group-item">Email : {{customer.emailAddress}}</li>
+          <li class="list-group-item">Nationality : {{customer.nationality}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pull-right">
+  <a href="#/customer/edit/{{customer._id}}">Edit</a> |  <a href="#" ng-click="removeProfile(customer._id)">Delete</a>
+</div>

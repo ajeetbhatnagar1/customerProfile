@@ -1,0 +1,21 @@
+<div class="panel panel-default" ng-init="getProfiles()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Listed Profiles</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+    	<div ng-repeat="customer in customers">
+    		<div class="col-md-6">
+    			<div class="col-md-6">
+    				<h4>{{customer.salutation+" "+customer.firstName+ " "+ customer.lastName}}</h4>
+    				<p>{{customer.nricfin}}</p>
+    				<a class="btn btn-primary" href="#/customer/details/{{customer._id}}">View Details</a>
+    			</div>
+    			<div class="col-md-6">
+    				<img class="thumbnail" src="{{customer.image_url}}">
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>
